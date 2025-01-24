@@ -220,9 +220,9 @@ async def batch_link(_, message):
                             # Add delay to avoid floodwait
                             sleep_msg = await app.send_message(
                                 message.chat.id,
-                                "Sleeping for 20 seconds to avoid flood..."
+                                "Sleeping for 8 seconds to avoid flood..."
                             )
-                            await asyncio.sleep(18)
+                            await asyncio.sleep(5)
                             await sleep_msg.delete()
                             await asyncio.sleep(2)
                     except Exception as e:
