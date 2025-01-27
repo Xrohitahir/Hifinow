@@ -170,10 +170,10 @@ async def batch_link(_, message):
                         await get_msg(None, user_id, msg.id, link, 0, message)
                         sleep_msg = await app.send_message(
                                 message.chat.id,
-                                "Sleeping for 2 seconds to avoid flood..."
+                                "Sleeping for 4 seconds to avoid flood..."
                         )
                         # Add delay to avoid floodwait
-                        await asyncio.sleep(2)
+                        await asyncio.sleep(4)
                         await sleep_msg.delete()
                 except Exception as e:
                     print(f"Error processing link {url}: {e}")
